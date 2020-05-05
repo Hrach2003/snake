@@ -152,6 +152,7 @@ function draw() {
   // if the snake eats the food
   if (snakeX == food.x && snakeY == food.y) {
     score++;
+    document.getElementById("score").innerHTML = `score: ${score}`;
     eatAudio.play();
     food = {
       x: Math.floor(Math.random() * rows),
