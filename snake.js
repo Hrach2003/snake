@@ -2,6 +2,8 @@ const cvs = document.getElementById("canvas");
 const ctx = cvs.getContext("2d");
 
 // create the unit
+const is_mobile =
+  !!navigator.userAgent.match(/iphone|android|blackberry/gi) || false;
 
 function useResize(element) {
   const resize = () => {
@@ -20,7 +22,8 @@ function useResize(element) {
 const { resize: resizeCanvas } = useResize(canvas);
 resizeCanvas();
 
-let boxSize = canvas.width / 30;
+let boxSize;
+is_mobile ? (boxSize = canvas.width / 20) : (boxSize = canvas.width / 30);
 let cols = canvas.width / boxSize;
 let rows = canvas.height / boxSize;
 // load imagess
