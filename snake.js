@@ -40,6 +40,8 @@ let moveDownAudio = new Audio("./audio/down.mp3");
 let moveLeftAudio = new Audio("./audio/left.mp3");
 let moveRightAudio = new Audio("./audio/right.mp3");
 
+let FPS = 10;
+
 // create the snake
 
 let snake = [
@@ -191,5 +193,4 @@ function draw() {
 }
 
 // call draw function every 100 ms
-
-let game = setInterval(draw, 100);
+let game = setInterval(draw, 1000 / FPS);

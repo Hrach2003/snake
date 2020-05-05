@@ -28,28 +28,39 @@
         }
         
         div {
+            float: right;
+            max-width: 50%;
             font-family: Arial, Helvetica, sans-serif;
             font-size: 40px;
+            position: absolute;
             color: white;
             text-transform: uppercase;
             font-weight: bold;
-            float: right;
-        }
-        #score{
             display: flex;
             align-items: center;
-            justify-content: flex-end;
+            justify-content: center;
+        }
+        @media screen and (min-width: 1000px) {
+            #score {
+                top: 30%;
+                right: 10%;
+            }
         }
         @media screen and (max-width: 1000px) {
             body{
                 justify-content: center;
                 flex-direction: column;
             }
+            #score {
+                bottom: 40px;
+            }
         }
     </style>
 </head>
 <body>
-  <canvas id="canvas"></canvas>
+    <div>
+      <canvas id="canvas"></canvas>
+    </div>
   <div id="score">score: 1</div>  
 
 	<script src="./swipe_detection_library.js"></script>
