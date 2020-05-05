@@ -35,7 +35,7 @@
   var startEl = null;
 
   function handleTouchEnd(e) {
-    e.preventDefault();
+    // e.preventDefault();
 
     // if the user released on a different target, cancel!
     if (startEl !== e.target) return;
@@ -86,7 +86,7 @@
   }
 
   function handleTouchStart(e) {
-    e.preventDefault();
+    // e.preventDefault();
 
     // if the element has data-swipe-ignore="true" we stop listening for swipe events
     if (e.target.getAttribute("data-swipe-ignore") === "true") return;
@@ -101,7 +101,7 @@
   }
 
   function handleTouchMove(e) {
-    e.preventDefault();
+    // e.preventDefault();
 
     if (!xDown || !yDown) return;
 

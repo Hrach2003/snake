@@ -58,7 +58,7 @@ let food = {
 
 // create the score var
 
-let score = 0;
+let score = 1;
 
 //control the snake
 
@@ -180,6 +180,9 @@ function draw() {
     collision(newHead, snake)
   ) {
     clearInterval(game);
+    setTimeout(() => {
+      alert(`Your score is ${score}!!`);
+    }, 0);
     deadAudio.play();
   }
 

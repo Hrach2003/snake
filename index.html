@@ -15,7 +15,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-						background-color: darkgreen;
+			background-color: darkgreen;
         }
         canvas {
             display: block;
@@ -27,9 +27,24 @@
             align-items: center;
             justify-content: center;
         }
+        div {
+            font-family: cursive;
+            font-size: 20px;
+            color: white;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin: 0 auto;
+        }
+        @media screen and (max-width: 1000px) {
+            body{
+                justify-content: center;
+                flex-direction: column;
+            }
+        }
     </style>
 </head>
 <body>
+  <div>snake</div>  
   <canvas id="canvas"></canvas>
 	<script src="./swipe_detection_library.js"></script>
 	<script src="./snake.js"></script>
